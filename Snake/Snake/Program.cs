@@ -19,16 +19,18 @@ namespace Snake
             HorizontalLine downline = new HorizontalLine(0, 78, 24, '+');
             VerticalLine leftline = new VerticalLine(0, 0, 24, '+');
             VerticalLine rigthline = new VerticalLine(78, 0,24, '+');
-            upline.Drow();
-            downline.Drow();
-            leftline.Drow();
-            rigthline.Drow();
+            upline.Draw();
+            downline.Draw();
+            leftline.Draw();
+            rigthline.Draw();
 
             //орисовка точки
             Point p = new Point(4, 5, '*');
             Snake snake = new Snake(p, 4, Direction.RIGHT);
-            snake.Drow();
+            snake.Draw();
+            snake.Move();
 
+            //Thread.Sleep
             Console.ReadKey();
         }      
     }
